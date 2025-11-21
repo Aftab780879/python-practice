@@ -1,9 +1,10 @@
 def user_menu():
+    print("\n********** USER MENU **********")
     print("1. Student Registration")
     print("2. Search")
     print("3. Delete")
     print("4. Exit")
-    print("5. View Records")
+    print("5. View Records\n")
 
     user_menu_choise=int(input("Please Enter Your Choise: "))
     return user_menu_choise
@@ -21,9 +22,9 @@ def student_registration():
     qualification_disc["Year"]=input("please enter the year:  ")
     student_disc["qualification"].append(qualification_disc)
     while 1:
-        print("do you want to enter more qualification")
+        print("\ndo you want to enter more qualification")
         print("Press 1. To Add More Qualification")
-        print("press 2. To Continue")
+        print("press 2. To Continue\n")
         qualification_entry=int(input("Please enter your choise: "))
         if qualification_entry==1:
             qualification_disc={}
@@ -71,7 +72,11 @@ def user_deleting():
         else:
                 print("not found")
 
-
+def user_records():
+    if len(student_list)>0:
+        print(student_list)
+    else:
+        print("\nThe Records are Empty\n")    
 
 student_list=[]
 while 1:
@@ -85,7 +90,7 @@ while 1:
     elif user_menu_choise==3:
         user_deleting()
     elif user_menu_choise==5:
-        print(student_list)
+        user_records()
     else:
         print(" WRONG INPUT ! , please try again")
 
