@@ -63,8 +63,13 @@ def user_searching():
             print("INVALID INPUT")  
 
 def user_deleting():
-    user_delete_choise=int(input("Please Enter the user index number you want to delete: "))
-    student_list.pop(user_delete_choise)
+    user_delete_choise=input("Please Enter the contact number of the user you want to delete: ")
+    for item in student_list:   
+        if item["contact"]==user_delete_choise:
+                print("ITEM DELETED SUCCESSFULLY")
+                student_list.remove(item)
+        else:
+                print("not found")
 
 
 
@@ -78,7 +83,7 @@ while 1:
     elif user_menu_choise==2:
         user_searching()
     elif user_menu_choise==3:
-        user_delete_choise=user_deleting()
+        user_deleting()
     elif user_menu_choise==5:
         print(student_list)
     else:
