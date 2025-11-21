@@ -1,3 +1,5 @@
+student_list=[]
+
 def user_menu():
     print("\n********** USER MENU **********")
     print("1. Student Registration")
@@ -12,7 +14,7 @@ def user_menu():
 def student_registration():
     student_disc={}
     print(f"********* Student Data *********")
-    student_disc["id"]= int(input("please enter the ID: "))
+    student_disc["id"]= input("please enter the ID: ")
     student_disc["name"]=input("please enter the students NAME: ")
     student_disc["address"]=input("please enter the students ADDRESS: ")
     student_disc["contact"]=input("Please enter your contact number: ")
@@ -78,20 +80,23 @@ def user_records():
     else:
         print("\nThe Records are Empty\n")    
 
-student_list=[]
-while 1:
-    user_menu_choise=user_menu()
-    if user_menu_choise==4:
-        break
-    elif user_menu_choise==1:
-        student_registration()
-    elif user_menu_choise==2:
-        user_searching()
-    elif user_menu_choise==3:
-        user_deleting()
-    elif user_menu_choise==5:
-        user_records()
-    else:
-        print(" WRONG INPUT ! , please try again")
+
+
+def all_operation():
+
+    while 1:
+        user_menu_choise=user_menu()
+        if user_menu_choise==4:
+            break
+        elif user_menu_choise==1:
+            student_registration()
+        elif user_menu_choise==2:
+            user_searching()
+        elif user_menu_choise==3:
+            user_deleting()
+        elif user_menu_choise==5:
+            user_records()
+        else:
+            print(" WRONG INPUT ! , please try again")
 
 
