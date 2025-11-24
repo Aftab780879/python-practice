@@ -124,7 +124,7 @@ def all_operation():
         elif user_menu_choise==5:
             user_records()
         else:
-            print(" WRONG INPUT ! , please try again")
+            print("WRONG INPUT ! , please try again")
 
 
 all_operation()
